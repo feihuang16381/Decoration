@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                style="@style/MatchWrap"
+    android:padding="20dp">
+
+    <cn.bingoogolapple.photopicker.widget.BGAImageView
+        android:id="@+id/iv_item_moment_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="8dp"
+        android:src="@mipmap/avatar"
+        app:bga_iv_circle="true"/>
+
+    <TextView
+        android:id="@+id/tv_item_moment_username"
+        style="@style/MatchWrap"
+        android:layout_toRightOf="@id/iv_item_moment_avatar"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="bingoogolapple"
+        android:textColor="#707EA3"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_item_moment_content"
+        style="@style/MatchWrap"
+        android:layout_below="@id/tv_item_moment_username"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="7dp"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:textColor="#474747"
+        android:textSize="14sp"
+        tools:text="我是测试内容"/>
+
+
+    <cn.bingoogolapple.photopicker.widget.BGANinePhotoLayout
+        android:id="@+id/npl_item_moment_photos"
+        style="@style/MatchWrap"
+        android:layout_below="@id/tv_item_moment_content"
+        app:bga_npl_itemCornerRadius="0dp"
+        app:bga_npl_itemSpanCount="3"
+        app:bga_npl_itemWhiteSpacing="4dp"
+        android:layout_marginBottom="27dp"
+        app:bga_npl_itemWidth="0dp"
+        app:bga_npl_otherWhiteSpacing="64dp"
+        app:bga_npl_placeholderDrawable="@mipmap/bga_pp_ic_holder_light"
+        app:bga_npl_showAsLargeWhenOnlyOne="true"/>
+   <!-- app:normalStrokeColor="@android:color/white"-->
+    <com.deadline.statebutton.StateButton
+        android:id="@+id/item_mo_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="关注"
+        android:layout_alignParentRight="true"
+        app:animationDuration="150"
+        app:normalBackgroundColor="@color/colorPrimaryDark"
+        app:normalStrokeWidth="2dp"
+        app:normalTextColor="@android:color/white"
+        app:pressedBackgroundColor="@color/colorPrimaryDark"
+        app:pressedStrokeColor="@android:color/white"
+        app:pressedStrokeWidth="2dp"
+        app:pressedTextColor="@android:color/white"
+        app:radius="5dp"
+        app:round="true"
+        app:strokeDashGap="2dp"
+        app:strokeDashWidth="5dp"
+        app:unableBackgroundColor="@color/colorPrimaryDark"
+        app:unableStrokeColor="@android:color/white"
+        app:unableStrokeWidth="2dp"
+        app:unableTextColor="@android:color/white" />
+
+    <RelativeLayout
+     android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_alignLeft="@+id/npl_item_moment_photos"
+        >
+
+
+        <ImageView
+            android:id="@+id/item_mo_comment"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/comments">
+
+        </ImageView>
+
+        <ImageView
+
+            android:id="@+id/item_mo_thumbsup"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/item_mo_comment"
+            android:layout_marginLeft="17dp"
+            android:layout_toRightOf="@+id/item_mo_comment"
+            android:src="@drawable/good"
+            android:clickable="true"
+            android:onClick="good">
+
+        </ImageView>
+
+        <ImageView
+
+            android:id="@+id/item_mo_collect"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/item_mo_thumbsup"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/item_mo_thumbsup"
+            android:src="@drawable/collection"></ImageView>
+
+        <ImageView
+            android:id="@+id/item_mo_forward"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/item_mo_thumbsup"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="17dp"
+            android:src="@drawable/forward"></ImageView>
+    </RelativeLayout>
+</RelativeLayout>

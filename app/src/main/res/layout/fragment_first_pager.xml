@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+  <!--  <scut.carson_ho.searchview.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:textSizeSearch="5dp"
+
+        app:textColorSearch="#3F51B5"
+        app:textHintSearch="输入查询关键字"
+        app:searchBlockHeight="150"
+        app:searchBlockColor="#ffffff"
+
+        />-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryDark"
+        tools:context=".MainActivity">
+
+        <SearchView
+            android:id="@+id/msearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="5"
+            android:layout_marginLeft="10dp"
+            android:iconifiedByDefault="false"
+            android:focusable="false"
+            android:background="@drawable/searchview_shape"/>
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_height="match_parent"
+            android:text="Cancel"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:tabIndicatorColor="@android:color/white"
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabTextColor="#EF9A9A"
+            app:tabTextAppearance="@style/tab_appearance"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
